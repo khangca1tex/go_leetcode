@@ -26,7 +26,6 @@ func findEleInArray(nums []int, target int) int {
 			return i
 		}
 
-		i++
 	}
 
 	return -1
