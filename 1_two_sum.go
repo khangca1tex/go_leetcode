@@ -1,20 +1,17 @@
 func twoSum(nums []int, target int) []int {
 
-	flag := 0
+	for i, num := range nums {
 
-	for flag < len(nums)-1 {
+		numNeedFind := target - num
 
-		numNeedFind := target - nums[flag]
-
-		sliceArray := nums[(flag + 1):len(nums)]
+		sliceArray := nums[(i + 1):len(nums)]
 
 		indexMatched := findEleInArray(sliceArray, numNeedFind)
 
 		if indexMatched >= 0 {
-			return []int{flag, indexMatched + flag + 1}
+			return []int{i, indexMatched + i + 1}
 		}
 
-		flag++
 	}
 
 	return nil
@@ -23,14 +20,13 @@ func twoSum(nums []int, target int) []int {
 // return the index of slice array
 func findEleInArray(nums []int, target int) int {
 
-	flag := 0
-	for flag < len(nums) {
+	for i, _ := range nums {
 
-		if nums[flag] == target {
-			return flag
+		if nums[i] == target {
+			return i
 		}
 
-		flag++
+		i++
 	}
 
 	return -1
