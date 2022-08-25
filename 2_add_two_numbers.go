@@ -5,6 +5,12 @@
  *     Next *ListNode
  * }
  */
+
+/**
+ * Runtime: 3 ms, faster than 99.67% of Go online submissions for Add Two Numbers.
+ * Memory Usage: 4.6 MB, less than 46.23% of Go online submissions for Add Two Numbers.
+ */
+
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	if l1 == nil && l2 == nil {
